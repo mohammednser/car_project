@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="71" height="24" viewBox="0 0 71 24">
+  <g id="follow" transform="translate(-290 -227)">
+    <rect id="Rectangle_471" data-name="Rectangle 471" width="71" height="24" rx="12" transform="translate(290 227)" fill="#fff"/>
+    <text id="Follow-2" data-name="Follow" transform="translate(333 243)" fill="#1db854" font-size="12" font-family="Roboto-Regular, Roboto"><tspan x="-17.52" y="0">Follow</tspan></text>
+    <line id="Line_58" data-name="Line 58" x2="8" transform="translate(300 239)" fill="none" stroke="#1db854" stroke-linecap="round" stroke-width="1"/>
+    <line id="Line_59" data-name="Line 59" y2="8" transform="translate(304 235)" fill="none" stroke="#1db854" stroke-linecap="round" stroke-width="1"/>
+  </g>
+</svg>
