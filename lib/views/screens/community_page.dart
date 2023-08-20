@@ -4,6 +4,7 @@ import 'package:flutter_svg/svg.dart';
 import '../../module/imagestopdeal_class.dart';
 
 import '../widgets/circleAvatar.dart';
+import '../widgets/custom_community-item.dart';
 import '../widgets/custom_searchbar.dart';
 import '../widgets/custom_topdeal-item.dart';
 
@@ -31,10 +32,10 @@ class _CommunityPageState extends State<CommunityPage> {
               child: Container(
                
               child: Container(
-    padding: EdgeInsets.only(top: 10,right: 10),
+    padding: const EdgeInsets.only(top: 10,right: 10),
              
                 // The search area here
-              decoration: BoxDecoration(color:Colors.transparent ),  
+              decoration: const BoxDecoration(color:Colors.transparent ),  
               //  backgroundColor: Colors.transparent,
 
              child: Container(
@@ -59,7 +60,8 @@ class _CommunityPageState extends State<CommunityPage> {
                 ),
             
               ),
-            )),
+            )
+            ),
               ),
             ),
               Padding(
@@ -111,15 +113,89 @@ class _CommunityPageState extends State<CommunityPage> {
           ),
 
           Padding(
-            padding: EdgeInsets.only(left: 20,top: 25),
-            child: Row(children: [
-              Text('Recommend',style: TextStyle(color: Color(0xff1DB854),fontWeight:FontWeight.w800)),
+            padding: const EdgeInsets.only(left: 20,top: 25),
+            child: 
+            Row(children: [
+              const Text('Recommend',style: TextStyle(color: Color(0xff1DB854),fontWeight:FontWeight.w800)),
               IconButton(alignment: Alignment.centerLeft,
                 icon: SvgPicture.asset('assets/icon/Polygon 1.svg'), onPressed: () {  },)
             ],),
-          )
-      ]
-      ),  
+          ),
+         
+             Container(
+               height: MediaQuery.of(context).size.height*0.6,
+              child: 
+               SingleChildScrollView(
+                scrollDirection: Axis.vertical,
+                physics:AlwaysScrollableScrollPhysics() ,
+                child: Column(
+                  children:const [
+                         ItemCommunity(
+                    image: 'assets/images/Ellipse 60.png',
+                    name: 'Prescott',
+                    description: 'BMW 3 Series owner',
+                    title: 'Volkswagen T-Roc: Interior dimensions revealed',
+                    imagevideo: 'assets/images/proportion169.png', 
+                    videoUrl: '   https://firebasestorage.googleapis.com/v0/b/palliative-care-eac65.appspot.com/o/gTXDVuEth9XvBG4g1y78NCLx26i2%2FFiles%2F1687625595391?alt=media&token=f988ae1d-cf22-4757-a06a-5f097f7e32b8',
+                  ),
+                   ItemCommunity(
+                    image: 'assets/images/Ellipse 60.jpg',
+                    name: 'Jennifer',
+                    description: 'Mercedes-AMG GT R owner',
+                    title:
+                        'Dramatic, fast and useable, with Mercedes’ thoroughness and AMG’s sporting genes.',
+                    imagevideo: 'assets/images/proportion169.jpg', 
+                    videoUrl:  'https://firebasestorage.googleapis.com/v0/b/palliative-care-eac65.appspot.com/o/gTXDVuEth9XvBG4g1y78NCLx26i2%2FFiles%2F1687625595391?alt=media&token=f988ae1d-cf22-4757-a06a-5f097f7e32b8',
+                  ),
+
+                  ],
+                )
+                  ),
+
+               )
+
+
+
+
+    //       SingleChildScrollView(
+    //        scrollDirection: Axis.vertical, 
+    // physics: AlwaysScrollableScrollPhysics(),
+    //        child: 
+    //           Column(
+
+    //         children: [
+    //             const ItemCommunity(image: 'assets/images/Ellipse 60.png', name: 'Prescott', description: 'BMW 3 Series owner', title: 'Volkswagen T-Roc: Interior dimensions revealed',),
+    //            const ItemCommunity(image: 'assets/images/Ellipse 60.jpg', name: 'Jennifer', description: 'Mercedes-AMG GT R owner', title: 'Dramatic, fast and useable, with Mercedes’ thoroughness and AMG’s sporting genes.',),
+    //        ]
+    //        ),
+    //       )
+    /////////////////////////////////////////////
+      //    ListView.separated(
+      //      scrollDirection: Axis.vertical,
+      //      shrinkWrap :false,
+          
+        
+      //  //   const ItemCommunity(image: 'assets/images/Ellipse 60.jpg', name: 'Jennifer', description: 'Mercedes-AMG GT R owner', title: 'Dramatic, fast and useable, with Mercedes’ thoroughness and AMG’s sporting genes.',);
+
+
+          
+      //    separatorBuilder: (BuildContext context, int index) => const Divider(),
+          
+      //    itemBuilder: (BuildContext context, int index) { 
+      //     return
+      //         const ItemCommunity(image: 'assets/images/Ellipse 60.png', name: 'Prescott', description: 'BMW 3 Series owner', title: 'Volkswagen T-Roc: Interior dimensions revealed',);
+
+      //    // const ItemCommunity(image: 'assets/images/Ellipse 60.jpg', name: 'Jennifer', description: 'Mercedes-AMG GT R owner', title: 'Dramatic, fast and useable, with Mercedes’ thoroughness and AMG’s sporting genes.',);
+
+
+      //     }, itemCount: 1,
+      //    )
+          
+         
+        
+
+      ]  //children main
+      ),   //main
     );
   }
 }

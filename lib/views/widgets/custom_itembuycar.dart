@@ -38,6 +38,7 @@ class ItemBuyCar extends StatelessWidget {
                   children: [
                     
                       Container(
+                        padding: EdgeInsets.only(left: 10),
                       height: 23,
                       width: 45,
                       decoration:const BoxDecoration(

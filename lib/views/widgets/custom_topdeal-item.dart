@@ -25,34 +25,35 @@ class TopDealItem extends StatelessWidget {
             children: [
               Container(
                 height: MediaQuery.of(context).size.height*0.15,
-                decoration: BoxDecoration(image: DecorationImage(image: AssetImage(image))
+                decoration: BoxDecoration(
+                  image: DecorationImage(image: AssetImage(image))
                 ),
               ),
               Positioned(
                 right: 10,
                 top: 10,
                 child: GestureDetector(onTap: () { },
-                child: Icon(Icons.favorite_border_outlined,),
+                child: const Icon(Icons.favorite_border_outlined,),
                 )
                 )
             ],
           ),
-          Padding(padding: EdgeInsets.only(left:16.0), child: Column(
+          Padding(padding: const EdgeInsets.only(left:16.0), child: Column(
              crossAxisAlignment: CrossAxisAlignment.start,
             children: [
                Text(
                 name,
               style: const TextStyle(fontSize: 14,fontWeight: FontWeight.bold),
              ),
-             SizedBox(height: 5,),
+             const SizedBox(height: 5,),
              Text("\$${price.toString()}",
              style: const TextStyle(color: Color(0xff1DB854),fontSize: 14),
                ),
-               SizedBox(height:15 ,),
+               const SizedBox(height:15 ,),
                Row(
                 children: [
                  SvgPicture.asset('assets/icon/Exterior-color.svg') ,
-                  SizedBox(width: 40,),
+                  const SizedBox(width: 40,),
                  IconButton(onPressed: (){}, icon:  SvgPicture.asset('assets/icon/View-details.svg')),   
                 ],
                ),

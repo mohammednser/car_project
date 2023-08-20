@@ -7,7 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'custom_searchbar.dart';
 
 class CustomAppBar extends StatelessWidget {
-   CustomAppBar( {super.key, });
+   const CustomAppBar( {super.key, });
  // final title = 'Bangkok';
   // final dynamic icon;
   //final Color YOURCOLOR = Color(0xfff1f2f3);
@@ -16,11 +16,11 @@ class CustomAppBar extends StatelessWidget {
   
         return Container(
 
-          padding: EdgeInsets.only(right: 18,left: 0),
+          padding: const EdgeInsets.only(right: 18,left: 0),
            child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-            Text('Bangkok ',style: TextStyle(fontSize: 14, color: Color(0xff8E8E93))),
+            const Text('Bangkok ',style: TextStyle(fontSize: 14, color: Color(0xff8E8E93))),
             
         Transform.rotate(
                           angle: 180 * pi / 360,
@@ -32,7 +32,7 @@ class CustomAppBar extends StatelessWidget {
                             onPressed: () {},
                           ),
                         ),
-            CustomSearchBar(),
+            const CustomSearchBar(),
              
            Container(
               height: 40,width: 40,
@@ -41,13 +41,14 @@ class CustomAppBar extends StatelessWidget {
                          child:badges.Badge(
                           stackFit: StackFit.passthrough,
                           position: badges.BadgePosition.topEnd(top: -15),
-                               badgeContent: Text('3',style: TextStyle(color: Colors.white , fontSize: 10), ),
+                               badgeContent: const Text('3',style: TextStyle(color: Colors.white , fontSize: 10), ),
                                child: SvgPicture.asset( 
                                 'assets/icon/icon-notfication.svg', 
                                   //    colorFilter: ColorFilter.mode(YOURCOLOR, BlendMode.srcIn),
-                                      color: Color(0xff8E8E93),
+                                      color: const Color(0xff8E8E93),
                                ),
-                             ) ,)  ) 
+                             ) ,) 
+                              ) 
                        ]),
              
           

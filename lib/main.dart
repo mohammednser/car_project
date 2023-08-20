@@ -2,8 +2,11 @@
 import 'package:car_project/views/screens/buycar_page.dart';
 import 'package:flutter/material.dart';
 
+import 'views/screens/Search-Brand_page.dart';
+import 'views/screens/Search_page.dart';
 import 'views/screens/community_page.dart';
 import 'views/screens/home_page.dart';
+import 'views/screens/profile_page.dart';
 import 'views/screens/secreen.dart';
 import 'views/widgets/custom_itembuycar.dart';
 
@@ -21,7 +24,7 @@ class MainApp extends StatelessWidget {
                scaffoldBackgroundColor:Color(0xffF1F2F3),
 
             ),
-      home:   const CommunityPage(),
+      home:   const SearchBrandPage(),
       
     );
   }
